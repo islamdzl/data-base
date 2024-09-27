@@ -6,6 +6,7 @@ const http = require('http')
 const app = express()
 const PORT = 2007
 const server = http.createServer(app)
+
 app.use(cors({ 
     origin:'*'
 }))
@@ -19,3 +20,4 @@ web_socket(server)
 server.listen(PORT, ()=>{
     console.log(`Server started in port : ${PORT}`)
 })  
+
